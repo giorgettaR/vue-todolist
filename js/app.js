@@ -63,12 +63,16 @@ createApp ({
                 this.inputValue = ''
             }
         },
-        todoDoneDelete(i){
+        todoDoneToggle(i){
             if (this.todos[i].done === false) {
                 this.todos[i].done = true
             } else {
-                this.todos.splice(i, 1)
+                this.todos[i].done = false
             }
+        },
+        todoDelete(i){
+                this.todos.splice(i, 1)
+                this.todoDoneToggle(i) 
         }
     },
     mounted() {

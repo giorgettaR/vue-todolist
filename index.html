@@ -26,19 +26,24 @@
                 <div class="card">
                     <div class="card-header">
                         <input 
+                            @keyup.enter="addTodo"
                             v-model.trim="inputValue"
                             class="add-todo" 
                             type="text" 
-                            placeholder="Nuovo to-do">
+                            placeholder="Nuovo to-do"
+                        >
                         <button @click="addTodo" class="btn btn-primary">Aggiungi</button>
                     </div>
                     <div class="card-body">
                         <ul class="todo-list">
-                            <li v-for="(todo,i) in todos" 
-                            :class="todo.done ? 'done' : ''"
-                            class="todo-item">
+                            <li
+                                @click="todoDoneToggle(i)"
+                                v-for="(todo,i) in todos" 
+                                :class="todo.done ? 'done' : ''"
+                                class="todo-item"
+                            >
                                 {{ todo.task }}
-                            <aside @click="todoDoneDelete(i)">X</aside>
+                                <aside @click="todoDelete(i)">X</aside>
                            </li>
                         </ul>
                     </div>
