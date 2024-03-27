@@ -1,3 +1,24 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
 li.done {
     text-decoration: line-through;
+}
+
+li {
+    position: relative;
+    width: 100%;
+}
+
+aside {
+    position: absolute;
+    top: 0;
+    left: -1rem;
 }

@@ -60,6 +60,14 @@ createApp ({
                     done: false,
                 }
                 this.todos.push(newTodo)
+                this.inputValue = ''
+            }
+        },
+        todoDoneDelete(i){
+            if (this.todos[i].done === false) {
+                this.todos[i].done = true
+            } else {
+                this.todos.splice(i, 1)
             }
         }
     },
