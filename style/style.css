@@ -4,21 +4,23 @@
     padding: 0;
 }
 
-ul {
+.todo-list {
     list-style: none;
+    padding-left: 0;
+    padding: 1rem;
 }
 
-li.done {
-    text-decoration: line-through;
-}
-
-li {
-    position: relative;
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     width: 100%;
 }
 
+.done div {
+    text-decoration: line-through;
+}
+
 aside {
-    position: absolute;
-    top: 0;
-    left: -1rem;
+    text-decoration: none;
 }

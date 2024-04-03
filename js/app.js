@@ -72,7 +72,6 @@ createApp ({
         },
         todoDelete(i){
                 this.todos.splice(i, 1)
-                this.todoDoneToggle(i) 
         }
     },
     mounted() {

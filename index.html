@@ -37,12 +37,14 @@
                     <div class="card-body">
                         <ul class="todo-list">
                             <li
-                                @click="todoDoneToggle(i)"
                                 v-for="(todo,i) in todos" 
                                 :class="todo.done ? 'done' : ''"
                                 class="todo-item"
                             >
-                                {{ todo.task }}
+                                <div
+                                @click="todoDoneToggle(i)"
+                                >
+                                {{ todo.task }}</div>
                                 <aside @click="todoDelete(i)">X</aside>
                            </li>
                         </ul>
